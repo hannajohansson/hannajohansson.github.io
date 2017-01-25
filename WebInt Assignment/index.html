@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>LAB 1</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> <!-- import icons -->
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+	<script type="text/javascript" src="myjava.js"></script>
+	<meta name="H. Johansson" content="WebInt Lab1">
+</head>
+
+<body onload="GeoLocation()">
+	<!--****************-->
+	<!--     HEADER     -->
+	<!--****************-->
+	<div class="header">
+		<!-- The <header> element specifies a header for a document or section. -->
+		<header>
+			<h1>Hanna's Blog</h1>
+		</header>
+	
+		<!-- Navigation bar -->
+		<!-- The <nav> element defines a set of navigation links. -->
+		<nav>
+			<a href="" id="nav">Contact</a> |
+			<a href="" id="nav">About</a> |
+			<a href="" id="nav">Pictures</a> |
+			<a href="" id="nav">Videos</a> 
+		</nav>
+	</div>
+	
+	<div id="left"></div>
+
+	<!--**********************-->
+	<!--     MAIN CONTENT     -->
+	<!--**********************-->
+	<section id="center">
+		<!-- The <article> element specifies independent, self-contained content.
+		An article should make sense on its own, and it should be possible to read it 
+		independently from the rest of the web site. -->
+		<article>
+			<h2>First blog post: A simple form</h2>
+			<p><i> 11 November, 2016 - 15:27 </i><p><br>
+			<p> Please fill in the information in the form given below. </p>
+			<form>
+				First name: <input type="text" name="firstname" placeholder ="First name" required><br><br>
+				Last name: <input type="text" name="lastname" placeholder ="Last name" required><br><br>
+				Email: <input type="email" name="email" placeholder ="Email" required><br><br>
+				Phone number: <input type="tel" name="phonenumber" placeholder ="Phone number" required><br><br>
+			</form>
+			<button type="submit" form="form1" value="Submit" onclick="submit()" >Submit</button><br><br>
+			<div id="r"> 
+				<i class="fa fa-comment-o" aria-hidden="true"></i> Comment <br>
+				<i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook
+			</div>
+		</article>
+		
+		<!--     MAP     -->
+		<article>
+			<h2>Second blog post: Show location in a map!</h2>
+			<p><i> 10 November, 2016 - 13:47 </i><p><br>
+			<p>Map centered on your current geo-location</p>
+			
+			<div id="mapholder"><i>
+				Show map here.
+			</i></div>
+			
+			<br><p> Fill in the address to find the position in the map. </p>
+			<form id="map-form">
+				Street: <input type="text" name="street" placeholder ="Street" required><br><br>
+				<!-- maxlength and pattern attributes could be used too to specify the zipcode -->
+				Zip code: <input type="text" name="zipcode" placeholder ="Zipcode" required><br><br> 
+				City: <input type="text" name="city" placeholder ="City" required><br><br>
+				Country: <input type="text" name="country" placeholder ="Country" required><br><br>
+			</form>
+				<input type="button" name="geoButton" value="Change location" onclick="lookup()"><br>
+
+			<div id="r"> 
+				<i class="fa fa-comment-o" aria-hidden="true"></i> Comment <br>
+				<i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook
+			</div>
+		</article>
+
+		<!--     VIDEO    -->
+		<article>
+			<h2>Third blog post: A video</h2>
+			<p><i> 10 November, 2016 - 11:34 </i><p><br>
+
+			<video id="myVideo" width="50%" controls="controls" preload="none">
+				<source src="https://commons.wikimedia.org/wiki/File:Elaphants_Dream.ogg" type="video/ogg">
+				<source src="https://commons.wikimedia.org/wiki/File:Elephants_Dream_(2006)_1080p24.webm" type="video/webm">
+				Your browser does not support the video tag.
+			</video><br><br>
+
+			<!-- Form for different options for the video -->
+			<form>
+				<p>Please enter an URL to play another video.</p>
+				URL:  <input type="url" name="url" id="newVideoURL" placeholder="URL for desired video">
+				<button type="button" value="changeVideo" name="newVideo" onclick="changeVideo(newVideoURL.value)">OK</button><br>
+	
+				<p>Enter a time in the video (in seconds) where you want the video to start playing and then press play.</p>
+				Time:  <input type="text" name="time" id="videoTime" placeholder="e.g. 5">
+				<button type="button" onclick="setCurTime(videoTime.value)">Set time</button><br>
+	
+				<p>Preview of the video above:
+					<video id="preview" controls>
+						<!-- The video will start playing at 0:00 and continue to play until 0:20. -->
+    					<source src="https://commons.wikimedia.org/wiki/File:Elaphants_Dream.ogg#t=0,20">
+    						Your browser does not support the video tag.
+					</video>
+					<br> The first 20 seconds of the video will be played.
+				</p>
+
+
+				<form method="post">
+					<p>Check the box to display the default controls:
+					<input type="checkbox" value="displaycontrols" />Default controls<br /></p>
+				</form>
+			
+				<p>Press the button to mirror the video.</p>
+				<button type="submit" value="Submit">Mirror the video</button><br>
+
+				<p>Press the button to rotate the video: 
+					<button type="button" id="rotate" onclick="rotateVideo()">Rotate video</button><br></p>
+					<video id="rotateVideo" controls>
+    					<source src="https://commons.wikimedia.org/wiki/File:Elaphants_Dream.ogg" type="video/ogg">
+    						Your browser does not support the video tag.
+					</video>
+
+			</form>
+			<br>
+			<div id="r"> 
+				<i class="fa fa-comment-o" aria-hidden="true"></i> Comment <br>
+				<i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook
+			</div>
+		</article>	
+		
+		<article>
+			<h2>Question number 7: A video (advanced)</h2>
+			<p><i> 9 November, 2016 - 17:18 </i><p><br><br>
+			<p>A second video in a bubble shape</p><br>
+			<div id="r"> 
+				<i class="fa fa-comment-o" aria-hidden="true"></i> Comment <br>
+				<i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook
+			</div>
+						
+		</article>	
+		
+		<article>
+			<h2>Fourth blog post: A video jukebox player)</h2>
+			<p><i> 9 November, 2016 - 08:54 </i><p><br><br>
+			<p>A series of videos that will be played one after the other. <br>
+			The jukebox should contain 3 or 4 videos and display a message such as "Playing video x/y".</p><br>
+			<div id="r" > 
+				<i class="fa fa-comment-o" aria-hidden="true"></i> Comment <br>
+				<i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook
+			</div>
+		</article>	
+		
+	</section>
+	
+	<!--**********************-->
+	<!--       SIDEBAR        -->
+	<!--*********************!-->
+	<div class="sidebar">
+		<!-- The <aside> element defines some content aside from the content it is placed in (like a sidebar).
+		The aside content should be related to the surrounding content. -->
+		<section id="right">
+			<aside id="profile">
+				<h2> Hanna Johansson </h2>
+				<p> 23 years old, from Sweden, currently doing one exchange year at Eurecom, Sophia-Antipolis, France. </p>
+			</aside>	
+			
+			<aside>
+				<h2> Search on the blog</h2>
+				<input type="text" name="search">
+				<button type="button">Search</button>
+			</aside>
+			
+			<aside>
+			<h2> Categories </h2>
+				<ul style="list-style-type:none">
+					<li> <a href="">Food</a> </li>
+					<li> <a href="">Travelling</a> </li>
+					<li> <a href="">School</a> </li>
+					<li> <a href="">Family</a> </li>
+					<li> <a href="">Friends</a> </li>
+					<li> <a href="">Hobbies</a> </li>
+				</ul>
+			</aside>
+			
+			<aside>
+			<h2> Archive </h2>
+				<ul style="list-style-type:none">
+					<li> <a href="">November</a> </li>
+					<li> <a href="">October</a> </li>
+					<li> <a href="">September</a> </li>
+					<li> <a href="">August</a> </li>
+					<li> <a href="">July</a> </li>
+					<li> <a href="">June</a> </li>
+					<li> <a href="">May</a> </li>
+					<li> <a href="">April</a> </li>
+					<li> <a href="">Mars</a> </li>
+					<li> <a href="">February</a> </li>
+					<li> <a href="">January</a> </li>
+				</ul>
+			</aside>
+		</section>
+	</div>
+	
+	<!--**********************-->
+	<!--        FOOTER        -->
+	<!--**********************-->
+	<!-- A footer typically contains the author of the document, copyright information, 
+	links to terms of use, contact information, etc.-->
+	<footer>
+		<br>
+		<p id = "footertxt">Copyright &copy; Hanna Johansson 
+			<time datetime="2016-11-13">2016</time></p>
+		<p>WebInt, EURECOM</p>
+		<p>Contact: 
+			<a href="hanna.johansson@eurecom.fr"> hanna.johansson@eurecom.fr</a>
+		</p>
+		<!-- icons from Font Awesome -->
+		<i class="fa fa-facebook-square" aria-hidden="true"></i> 
+		<i class="fa fa-instagram" aria-hidden="true"></i>
+		<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+	</footer>
+
+</body>
+
+</html>

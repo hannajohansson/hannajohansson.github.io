@@ -1,0 +1,85 @@
+
+body{
+	background-color: #fdfafa;
+}
+
+footer {
+	background-color: #D9DDFF;
+	text-align: center;
+	clear: both;
+	height: 10%;
+	padding-bottom: 20px;
+}
+
+header {
+	font-size: 200%;
+}
+
+article {
+	margin: 2%;
+	padding: 4%;
+	background-color: #e5e8ff;
+}
+
+i {
+	padding: 3px;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.header {
+	background-color: #D9DDFF;
+	text-align: center;
+	padding: 2%;
+	font-family: "Courier New", monospace;
+}
+
+#left{
+	background-color: ##fdfafa;
+	padding: 2%;
+	float:left;
+	width:16%;
+} 
+
+#center{
+	background-color: #ffffff;
+	float:left;
+	width:54%;
+	padding: 3%;
+	text-align: center;
+	font-family: "Arial", sans-serif;
+}
+
+#right{
+	background-color: #adb0cc;
+	padding: 2%;
+	float:left;
+	width:16%;
+} 
+
+#nav {
+	text-align: center;
+	font-size: 140%;
+	text-decoration: none;
+	margin: 6%;
+}
+
+#mapholder {
+	width= 50%;
+}
+
+ #rotateVideo{
+        -webkit-transform: rotate(20deg);
+        -moz-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+        -webkit-transform-origin: bottom left;
+        -moz-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+ }
+
+ #r {
+ 	text-align: right;
+ }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- *************************************************************************************************************
+    Authors: Hanna Johansson and Katja Mäenpää.
+    File created: 2016-11-23
+
+    This file: The map page of the application FindFoodFast. The map page shows the location of the selected restaurants in a single map, with different pins for different restaurants.
+
+************************************************************************************************************** -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Info on tab -->
+    <title>FindFoodFast</title>
+    <link rel="icon" type="image/png" href="FFF.png">
+
+    <!-- Import Stylesheets and fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> <!-- import icons -->
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="functions.js"></script>
+
+    <meta name="HannaKatja" content="WebInt Project">
+</head>
+
+
+<body id="map-body" onload="showMap(), getTodaysDate()">
+    <header class="header">
+        <h3 id="myWeekday"> Thursday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </h3>
+        <h1><a href = "index.html" id="FFF_homepage">
+            &nbsp; &nbsp;
+            <i class="fa fa-cutlery" aria-hidden="true"></i><!-- icon from Font Awesome -->
+            FindFoodFast &nbsp; &nbsp; </a>
+        </h1>
+        <h3 id="todaysDate"> 1/1/17 </h3>
+        <br>
+    </header>
+
+    <!-- Navigation bar: possibility to go back to main page + read information -->
+    <div class="navbar">
+        <a href="index.html" id="go_back">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            GO BACK
+        </a>
+        <br>
+        <!-- Drop down with information about the application -->
+        <div class="dd_info">
+            <i class="fa fa-info-circle" id="allergy_arrow" aria-hidden="true" ></i>
+            <div class="info-content">
+                <h1> Welcome to FindFoodFast! </h1>
+                <p> Allow FindFoodFast to use your location to display the lunch places closest to you. Some lunch offers will be presented to you with allergy information and prices. Please see below for more information about allergies and special diets. </p>
+                <p> Click on the icon  <i class="fa fa-map-marker" aria-hidden="true"></i> to find yourself and the lunch places in a map or go straight to the
+                    restaurant's web site using the icon  <i class="fa fa-external-link" aria-hidden="true"></i> . </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="left"></div>
+
+    <div id="map-div">
+    <section class="registrationpage">
+        <div id="map">
+            Loading...
+        </div>
+        <div id="restaurant-list">
+            <h3 id="fontcolor"> Lunch places near you: </h3><br><br>
+            A) <a href="http://tttruck.com/foodtruck/son-of-a-bun-antibes" target="_blank">Son of a Bun</a><br>
+            B) <a href="http://www.crous-nice.fr/restaurant/helios-ru/" target="_blank">Le Crous</a> <br>
+            C) <a href="http://www.lartdoise-craie-lhistoire.fr/" target="_blank">L'Artoise</a> <br>
+            D) <a href="http://www.lolivierdugolf.com/" target="_blank">L'Olivier</a> <br>
+            E) <a href="https://www.supercasino.fr/" target="_blank">Casino</a> <br>
+            F) <a href="http://subwayfrance.fr/" target="_blank">Subway</a> <br>
+        </div>
+    </section>
+    </div>
+
+     <!-- FOOTER -->
+    <footer>
+        <br>
+        <p id = "footertxt">Copyright &copy; Hanna Johansson, Katja Mäenpää
+            <time datetime="2016-11-28">2016</time></p>
+        <p>WebInt, EURECOM, Sophia-Antipolis, FRANCE</p>
+        <address>
+            <a href="hanna.johansson@eurecom.fr" class="contact"> hanna.johansson@eurecom.fr</a> &nbsp; &nbsp;
+            <a href="katja.maenpaa@eurecom.fr" class="contact"> katja.maenpaa@eurecom.fr</a>
+        </address>
+        <p><a href="https://github.com/hannajohansson/FindFoodFast"><i class="fa fa-github fa-2x"></i></a></p>
+    </footer>
+
+</body>
+
+
+</html>

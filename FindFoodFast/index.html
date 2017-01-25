@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<!-- *************************************************************************************************************
+ 	Authors: Hanna Johansson and Katja Mäenpää.
+	File created: 2016-11-23
+
+	This file: The main page of the application FindFoodFast. The application displays the actual date,
+	options of restaurants/lunch places nearby the user's location and information about current lunch offers,
+	such as price and allergy information. It is also possible to show the restaurants positions in a map
+	together with the users position.
+
+************************************************************************************************************** -->
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<!-- Info on tab -->
+	<title>FindFoodFast</title>
+	<link rel="icon" type="image/png" href="FFF.png">
+
+	<!-- Import Stylesheets and fonts -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> <!-- import icons -->
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="functions.js"></script>
+
+	<meta name="HannaKatja" content="WebInt Project">
+</head>
+
+<body onload="getTodaysDate(), checkGeolocation()">
+
+	<!-- HEADER -->
+	<header class="header">
+		<h3 id="myWeekday"> Thursday &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </h3>
+		<h1>
+			&nbsp; &nbsp;
+			<i class="fa fa-cutlery" aria-hidden="true" id="FFF_icon"></i><!-- icon from Font Awesome -->
+			FindFoodFast &nbsp; &nbsp;
+		</h1>
+		<h3 id="todaysDate"> 1/1/17</h3>
+		<br>
+	</header>
+
+	<!-- Navigation bar: possibility to register + read information -->
+	<div class="navbar">
+		<a href="registration.html" id="register">REGISTER</a>
+		&nbsp; &nbsp;
+		<!-- Drop down with information about the application -->
+		<div class="dd_info">
+			<i class="fa fa-info-circle" id="info-button-img" aria-hidden="true" ></i>
+			<div class="info-content">
+				<h1> Welcome to FindFoodFast! </h1>
+				<p> Allow FindFoodFast to use your location to display the lunch places closest to you. Some lunch offers will be presented to you with allergy information and prices. Please see below for more information about allergies and special diets. </p>
+				<p> Click on the icon  <i class="fa fa-map-marker" aria-hidden="true"></i> to find yourself and the lunch places in a map or go straight to the
+					restaurant's web site using the icon  <i class="fa fa-external-link" aria-hidden="true"></i> . </p>
+			</div>
+		</div>
+	</div>
+
+	<div class="left"></div>
+
+	<!-- BODY -->
+	<section class="main">
+			<!-- Lunch option 1 -->
+			<article class="restaurant">
+				<h2> Casino </h2>
+				<table class="menu">
+					<tr>
+						<td> Baguette </td>
+						<td> M, G </td>
+						<td> 4,00 €</td>
+					</tr>
+					<tr>
+						<td> Pasta </td>
+						<td> V </td>
+						<td> 4,50 €</td>
+					</tr>
+				</table>
+				<div class="links">
+					<!-- icons from Font Awesome -->
+					<a href="https://www.supercasino.fr/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> &nbsp; &nbsp; &nbsp;
+					<a href="map.html"> <i class="fa fa-map-marker" aria-hidden="true"></i></a>
+				</div>
+			</article>
+
+			<!-- Lunch option 2 -->
+			<article class="restaurant">
+				<h2> Sun of a Bun </h2>
+				<table class="menu">
+					<tr>
+						<td>Hamburger </td>
+						<td>M, G</td>
+						<td>6,00 €</td>
+					</tr>
+					<tr>
+						<td>Kebab</td>
+						<td>G</td>
+						<td>5,50 €</td>
+					</tr>
+					<tr>
+						<td>Salad</td>
+						<td>V</td>
+						<td>7,00 €</td>
+					</tr>
+				</table>
+				<div class="links">
+					<!-- icons from Font Awesome -->
+					<a href="http://tttruck.com/foodtruck/son-of-a-bun-antibes" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> &nbsp; &nbsp; &nbsp;
+					<a href="map.html"> <i class="fa fa-map-marker" aria-hidden="true"></i></a>
+				</div>
+			</article>
+
+			<!-- Lunch option 3 -->
+			<article class="restaurant">
+				<h2> Subway </h2>
+					<table class="menu">
+						<tr>
+							<td>Sub of the day</td>
+							<td>M, G</td>
+							<td>6,30 €</td>
+						</tr>
+						<tr>
+							<td>Salad</td>
+							<td>V</td>
+							<td>6,70 €</td>
+						</tr>
+					</table><br>
+				<div class="links">
+					<!-- icons from Font Awesome -->
+					<a href="http://subwayfrance.fr/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> &nbsp; &nbsp; &nbsp;
+					<a href="map.html"> <i class="fa fa-map-marker" aria-hidden="true"></i></a>
+				</div>
+			</article>
+
+			<!-- Lunch option 4 -->
+			<article class="restaurant">
+				<h2> Le Crous </h2>
+					<table class="menu">
+						<tr>
+							<td>Dish of the day</td>
+							<td>G</td>
+							<td>3,50 €</td>
+						</tr>
+						<tr>
+							<td>Vegatarian dish</td>
+							<td>V</td>
+							<td>3,50 €</td>
+						</tr>
+					</table><br>
+				<div class="links">
+					<!-- icons from Font Awesome -->
+					<a href="http://www.crous-nice.fr/restaurant/helios-ru/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> &nbsp; &nbsp; &nbsp;
+					<a href="map.html"> <i class="fa fa-map-marker" aria-hidden="true"></i></a>
+				</div>
+			</article>
+
+			<!-- Lunch option 5 -->
+			<article class="restaurant">
+				<h2> L'Artoise Snack </h2>
+					<table class="menu">
+						<tr>
+							<td>Pizza</td>
+							<td>G, L</td>
+							<td>4,70 €</td>
+						</tr>
+						<tr>
+							<td>Pasta</td>
+							<td>G, V</td>
+							<td>4,00 €</td>
+						</tr>
+						<tr>
+							<td>Wrap</td>
+							<td>G</td>
+							<td>5,10 €</td>
+						</tr>
+					</table><br>
+				<div class="links">
+					<!-- icons from Font Awesome -->
+					<a href="http://www.lartdoise-craie-lhistoire.fr/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> &nbsp; &nbsp; &nbsp;
+					<a href="map.html"> <i class="fa fa-map-marker" aria-hidden="true"></i></a>
+				</div>
+			</article>
+
+			<!-- Lunch option 6 -->
+			<article class="restaurant">
+				<h2> L'Olivier du Golf </h2>
+					<table class="menu">
+						<tr>
+							<td>Pizza</td>
+							<td>G</td>
+							<td>3,50 €</td>
+						</tr>
+						<tr>
+							<td>Baguette</td>
+							<td>G</td>
+							<td>4,80 €</td>
+						</tr>
+					</table><br>
+				<div class="links">
+					<!-- icons from Font Awesome -->
+					<a href="http://www.lolivierdugolf.com/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> &nbsp; &nbsp; &nbsp;
+					<a href="map.html"> <i class="fa fa-map-marker" aria-hidden="true"></i></a>
+				</div>
+			</article>
+	</section>
+
+	<div class="left">
+		<!-- Information about the allergies -->
+		<aside id="allergiesInfo">
+			<h2 id="fontcolor">Special diets? </h2>
+			<h2 id="look_here"> Look over here!</h2>
+				<div class="dropdown">
+				  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+				  <i class="fa fa-angle-double-down fa-2x" id="allergy_arrow" aria-hidden="true" ></i>
+				  <div class="dropdown-content">
+				    <ul id='allergy_list'>
+						<li> Ve = Vegan </li>
+						<li> V = Vegetarian </li>
+						<li> F = Fish </li>
+						<li> G = Gluten </li>
+						<li> L = Lactose </li>
+						<li> E = Egg </li>
+						<li> N = Nuts </li>
+					</ul>
+				    <div class="desc">
+				    	<p> If no information about the content is given, contact the restaurant directly for more information. </p>
+						<p> We strongly suggest you to ALWAYS ask if you have any food allergy. </p></div>
+				  </div>
+				</div>
+		</aside>
+	</div>
+
+	<!-- FOOTER -->
+	<footer>
+		<br>
+		<p id = "footertxt">Copyright &copy; Hanna Johansson, Katja Mäenpää
+			<time datetime="2016-11-28">2016</time></p>
+		<p>WebInt, EURECOM, Sophia-Antipolis, FRANCE</p>
+        <address>
+            <a href="hanna.johansson@eurecom.fr" class="contact"> hanna.johansson@eurecom.fr</a> &nbsp; &nbsp;
+            <a href="katja.maenpaa@eurecom.fr" class="contact"> katja.maenpaa@eurecom.fr</a>
+        </address>
+		<p><a href="https://github.com/hannajohansson/FindFoodFast"><i class="fa fa-github fa-2x"></i></a></p>
+	</footer>
+</body>
+
+</html>

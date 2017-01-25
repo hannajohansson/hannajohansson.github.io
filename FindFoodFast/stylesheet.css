@@ -1,0 +1,393 @@
+/******************************************
+	select all elements without selector
+	# for id
+	. for class
+******************************************/
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+article {
+	margin: 2%;
+	padding: 1%;
+	background-color: #8BBEC5;
+	border-radius: 50px 15px;
+	display: inline-table;
+	width: 18em;
+	height: 16em;
+	font-family: "Arial", sans-serif;
+}
+
+body {
+	background-color: #ededed; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#5AA3AD, white, #ededed); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#5AA3AD, white, #ededed); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#5AA3AD, white, #ededed); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#5AA3AD, white, #ededed); /* Standard syntax */
+}
+
+fieldset {
+	width: 45%;
+	margin: auto;
+}
+
+footer {
+	background-color: #FF7400; /*#D40039; #FF0044;*/
+	text-align: center;
+	font-family: "Arial", sans-serif;
+	clear: both;
+	height: 10%;
+	padding-bottom: 20px;
+}
+
+header {
+	width: 96%;
+	background-color: #5AA3AD;
+	text-align: center;
+	font-size: 200%;
+	padding: 2%;
+}
+
+h1 {
+	display: inline;
+}
+
+h2 {
+	text-align: center;
+}
+
+h3 {
+	display: inline;
+}
+
+i {
+	color: black;
+}
+
+i:hover {
+	color: white;
+}
+
+input[type=text], select {
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=url], select {
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+legend {
+	font-weight: bold;
+}
+
+ul {
+	list-style-type:none;
+}
+
+/***************
+	# id
+***************/
+#allergiesInfo{
+	float: right;
+	background-color: transparent;
+}
+
+#allergy_arrow {
+	cursor: pointer;
+}
+
+/* CSS for the register button, animate on hover */
+#btn_register {
+	float: right;
+	background-color: #FF7400;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#btn_register span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#btn_register span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#btn_register:hover span {
+  padding-right: 25px;
+}
+
+#btn_register:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* END of register button */
+
+/* CSS for the 'add dish' button, effect on click */
+#btn_add_dish {
+	float: right;
+	background-color: #FF7400;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#btn_add_dish:hover {
+	background-color: #5AA3AD}
+
+#btn_add_dish:active {
+  background-color: #5AA3AD;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/* END of 'add dish' button */
+
+
+
+#FFF_homepage {
+    color: black;
+    text-decoration: none;
+}
+
+#FFF_homepage:hover {
+    color: white;
+    transition: all 0.2s ease-out;
+}
+
+#FFF_icon:hover {
+	color: black;
+}
+
+#fontcolor {
+	color: #FF7400;
+}
+
+#go_back {
+	color: black;
+	float: left;
+	font-size: 60%;
+	font-family: "Arial", sans-serif;
+	text-decoration: none;
+}
+
+#go_back:hover {
+	color: white;
+}
+
+#info-button-img {
+    cursor: pointer;
+}
+
+#look_here {
+	font-style: italic;
+	font-size: 140%;
+}
+
+#map-div {
+	width: 100%;
+	height: 100%;
+	background-color: #ededed;
+	text-align: center;
+}
+
+#map {
+	width: 600px;
+	height: 400px;
+	/*margin-left: auto;
+	margin-right: auto;*/
+	margin: 5%;
+	position: center;
+}
+
+#register {
+	color: black;
+	font-size: 60%;
+	font-family: "Arial", sans-serif;
+	text-decoration: none;
+}
+
+#register:hover {
+	color: white;
+}
+
+#restaurant-list {
+	text-align: left;
+	color: black;
+	text-decoration: none;
+	padding-left: 6%;
+	padding-bottom: 5%;
+}
+
+/***************
+	classes
+***************/
+
+.contact {
+    text-decoration: none;
+    color: black;
+}
+
+/* CSS for the allergy dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.desc {
+    padding: 5px;
+    text-align: center;
+    font-size: 80%;
+}
+/* END for the allergy dropdown */
+
+/* CSS for the information dropdown */
+.dd_info {
+    position: relative;
+    width: 20px;
+    float: right;
+}
+
+.info-content {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 55%;
+    font-family: "Arial", sans-serif;
+    right: 0;
+    max-width: 450px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 15px;
+}
+
+.dd_info:hover .info-content {
+    display: block;
+}
+/* END for the information dropdown */
+
+.fa-external-link {
+	color: black;
+}
+
+.header {
+	display: inline-table;
+}
+
+.left {
+    background-color: transparent;
+    padding: 2%;
+    float:left;
+    width:10%;
+}
+
+.links {
+	text-align: center;
+	list-style-type: none;
+	color: black;
+	text-decoration: none;
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 8%;
+	padding-left: 38%;
+}
+
+.main {
+	width: 72%;
+	text-align: center;
+	float: left;
+	background-color: white;
+}
+
+.menu {
+	float: left;
+	width: 100%;
+	padding-bottom: 5%;
+}
+
+.navbar {
+	text-align: right;
+	font-size: 150%;
+	background-color: #FF7400; /**#8BBEC5;*/
+	padding-right: 2%;
+}
+
+.noborder {
+    border: none;
+}
+
+.prices {
+	display: inline-table;
+	list-style-type: none;
+}
+
+.restaurant {
+	position: relative;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.restaurant:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+.registrationpage {
+	width: 72%;
+	float: left;
+	background-color: white;
+	font-family: "Arial", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

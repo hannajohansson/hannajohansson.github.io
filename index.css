@@ -1,0 +1,49 @@
+
+body{
+	background-color: #fdfafa;
+}
+
+footer {
+	background-color: #D9DDFF;
+	text-align: center;
+	clear: both;
+	padding-bottom: 20px;
+}
+
+header {
+	font-size: 100%;
+}
+
+nav {
+	background-color: white;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.header {
+	background-color: #D9DDFF;
+	text-align: center;
+	padding: 2%;
+	font-family: "Courier New", monospace;
+}
+
+#center{
+	background-color: #ffffff;
+	float:left;
+	width: 100%;
+	padding: 3%;
+	text-align: center;
+	font-family: "Arial", sans-serif;
+}
+
+#nav {
+	text-align: center;
+	font-size: 100%;
+	text-decoration: none;
+	margin: 6%;
+}
+
+#profilbild {
+	border-radius: 40px;
+	width: 10%;
+}

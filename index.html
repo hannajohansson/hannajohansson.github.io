@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> Hanna Johansson </title>
 
-	<!-- Add stylesheets -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> <!-- import icons -->
+	<!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="index.css">
+
+	<!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <body>
-	<div class="header">
 
+	<div>
+		<img class="top_header" src="img/header3.JPG" alt="background">
+		<h2 id="myname"><span> HANNA JOHANSSON</span></h2><br>
+		<h3><span>Welcome to my page</span><h3>
+	</div>
+
+	<div class="header">
 		<!-- HEADER -->
 		<header>
-			
 			<div>
-				<img id="profilbild" src="img/hanna.jpg" style="display:inline" alt="Hanna">
+				<img id="profilbild" src="img/hanna.JPG" style="display:inline" alt="Hanna">
+				<br><br>
 			</div>
-			<h1>Hanna Johansson</h1>
 		</header>
 	
 		<!-- Navigation bar -->
@@ -30,20 +50,42 @@
 		</nav>
 	</div>
 
-	<div id="center">
-		<h1> Some nice info here maybe! :) </h1>
+	<div class="about">
+		<p> I am currently studying my 4th year of my M.Sc. in Media Technology at Linköping University, Sweden.<br>
+			This year I have however left Sweden for an exchange year abroad at Eurecom in Sophia-Antipolis, France. </p>
+	</div>
+
+	<div class="container-fluid">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<h2> Listed below are some projects I've contributed to: </h2>
+
+			<div class="project">
+				<h1> 1 </h1>
+			</div>
+
+			<div class="project">
+				<h1> 2 </h1>
+			</div>
+
+			<div class="project">
+				<h1> 3 </h1>
+			</div>
+
+			<div class="project">
+				<h1> 4 </h1>
+			</div>
+		</div>
+		<div class="col-md-2"></div>
 	</div>
 
 	<!-- FOOTER -->
 	<footer>
 		<br>
-		<p>Copyright &copy; Hanna Johansson 2017 </p>
-		<p>Contact: 
-			<a href="hanna.johansson@eurecom.fr"> hanna.johansson@eurecom.fr</a>
-		</p>
+		<p>&copy; Hanna Johansson 2017 </p>
 		<!-- icons from Font Awesome -->
-		<i class="fa fa-github" aria-hidden="true"></i> &nbsp; &nbsp;
-		<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+		<i class="fa fa-github  fa-4x" aria-hidden="true"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<i class="fa fa-linkedin-square  fa-4x" aria-hidden="true"></i>
 	</footer>
 
 </body>

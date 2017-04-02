@@ -1,13 +1,47 @@
 
 body{
 	background-color: #fdfafa;
+	float: left;
 }
 
 footer {
-	background-color: #D9DDFF;
+	background-color: #262626;
 	text-align: center;
 	clear: both;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
+	padding-top: 10px;
+	color: white;
+	font-family: "Arial", sans-serif;
+	font-size: 50%;
+}
+
+h2 { 
+   color: blue;
+   text-align: center;
+}
+
+h2 span { 
+   color: white; 
+   font: bold 20px/40px Helvetica, Sans-Serif; 
+   letter-spacing: 10px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+h3 { 
+   position: absolute; 
+   top: 26%; 
+   padding-left: 34%;
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+   box-sizing: border-box; 
+}
+
+h3 span { 
+   color: white; 
+   font: bold 18px/38px Helvetica, Sans-Serif; 
+   letter-spacing: 6px;  
 }
 
 header {
@@ -15,25 +49,70 @@ header {
 }
 
 nav {
-	background-color: white;
+	background-color: #262626;
+	color: white;
+	font-weight: bold;
 	padding-top: 1%;
 	padding-bottom: 1%;
 }
 
+.about {
+	background-color: #F6F6F6; 
+	padding: 2% 0 2% 0;
+	text-align: center;
+	font-size: 60%;
+	font-style: italic;
+	font-family: "Arial", sans-serif;
+	}
+
+.center{
+	background-color: #ffffff;
+	width: 96%;
+	padding: 2%;
+	text-align: center;
+	font-family: "Arial", sans-serif;
+}
+
+
 .header {
-	background-color: #D9DDFF;
+	background-color: #262626; /*#b3c6ff; /*#D9DDFF;*/
 	text-align: center;
 	padding: 2%;
 	font-family: "Courier New", monospace;
 }
 
-#center{
-	background-color: #ffffff;
-	float:left;
-	width: 100%;
-	padding: 3%;
-	text-align: center;
-	font-family: "Arial", sans-serif;
+
+.project {
+	background-color: #b3c6ff;
+    /*width: 60%;*/
+    margin: 5%;
+    color: white;
+    text-align: center;
+    /*padding: 5%;*/
+}
+
+.project:hover {
+	opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.top_header {
+	position: relative;
+  	width: 100%;
+  	text-align: center;
+  	color: white;
+  	opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+
+#myname {
+    position: absolute; 
+    top: 16%; 
+    padding-left: 29%; 
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
 }
 
 #nav {

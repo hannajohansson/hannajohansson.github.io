@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Info on tab -->
+	<title>Hitta försvunna DC3:an</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+   	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<!-- HEADER -->
+	<div id="header">
+		<img id="logga" src="img/logga.JPG" alt="background">
+		<div class="pull-right"><i class="fa fa-location-arrow fa-3x" id="mapIcon" aria-hidden="true" onclick="showMap()"></i></div>
+	</div>
+
+	<div id="boarder"></div>
+
+	<div id="map" style="display:none;">
+		<img id="karta" src="img/karta.PNG" alt="background">
+	</div>
+
+	<!-- PAGE CONTENT -->
+	<div id="page">
+		<div id="welcome">
+			<br><br><h1>VÄLKOMMEN</h1>
+			<div class="main">
+				<br><button type="button" class="button" id="startButton" onclick="showDiv()">STARTA</button>
+		    </div>
+		</div>
+
+		<!-- QUESTION 1 -->
+		<div id="question1"  style="display:none;">
+			<div>
+				<br><br><h1>Vad var svenskarna rädda för under den här tiden?</h1>
+			</div>
+			<div>
+				<div class="main">
+					<form>
+			            <input id="inputtext1" type="text" name="FirstInput" placeholder ="Skriv ditt svar här..." required > 
+			        </form>
+						<br><button type="button" class="button" id="answerButton" onclick="getFirstAnswer()">Svara</button>
+			    </div>
+			    <!-- Display feedback -->
+			    <br><br><div id="main"></div>
+			</div>
+		</div>
+		
+		<!-- QUESTION 1, STEP 2 -->
+		<div id="question1step2"  style="display:none;">
+			<div>
+				<br><br><h1>GRATTIS! Du svarade rätt!</h1>
+				<h3>Nu står du i ett typiskt hem under 1950-talet. <br> Här bor Beata i Stockholms området.</h3>
+			</div>
+			<div class="main">
+				<p>Beata kollar ut från fönstret en solig dag och hör ett ekande ljud. <br>
+				Hon tittar upp mot himlen och ser ett flygplan som flyger väldigt nära förbi hennes hus. </p>
+				<br><button type="button" class="button" id="nextButton" onclick="next()">Gå vidare</button>
+			</div>
+		</div>
+
+		<!-- QUESTION 1, STEP 3 -->
+		<div id="question1step3"  style="display:none;">
+			<div>
+				<br><br><h1>LEDTRÅD</h1>
+			</div>
+			<div class="main">
+				<p>I någon av skåpen finns ett telefonnummer. <br> Hitta numret och slå in det i telefonen. <br>
+					Där får du nästa ledtråd.</p>
+				<br><button type="button" class="button" id="clueButton" onclick="clue1()">Gå vidare</button>
+			</div>
+		</div>
+
+		<!-- QUESTION 1, STEP4 -->
+		<div id="question1step4"  style="display:none;">
+			<div>
+				<br><br><h1>Vilken ljudsignal hörde du?</h1>
+			</div>
+			<div>
+				<div class="main">
+					<p>Tryck på knappen för att höra signalen igen.</p><br><br>
+					<button type="button" class="button" id="larm" onclick="wrongAlarm()">Beredskapslarm</button>
+					<button type="button" class="button" id="larm" onclick="correctAlarm()">Flyglarm</button>
+					<button type="button" class="button" id="larm" onclick="wrongAlarm()">Faran är över</button>
+			    </div>
+			</div>
+			<!-- Display feedback -->
+			<br><br><div id="main1"></div>
+		</div>	
+
+		<!-- QUESTION 2: TV -->
+		<div id="question2"  style="display:none;">
+			<div>
+				<br><br><h1>GRATTIS! Du svarade rätt! <br> Nu kan du gå till vardagsrummet i 60-talshemmet.</h1>
+				<h2>Kan du se något som inte fanns i det tidigare hemmet?</h2>
+			</div>
+			<div class="main">
+				<form>
+		            <input id="inputtext2" type="text" name="SecondInput" placeholder ="Skriv ditt svar här..." required > 
+		        </form>						
+		        <br><button type="button" class="button" id="answerButton" onclick="getTVAnswer()">Svara</button>
+			</div>
+			<!-- Display feedback -->
+			<br><br><div id="main"></div>
+		</div>
+
+		<!-- QUESTION 2, STEP2: Hänga gubbe -->
+		<div id="question2step2"  style="display:none;">
+			<div>
+				<br><br><h1>GRATTIS! Du svarade rätt! <br> Nu ska vi spela "Hänga gubbe".</h1>
+				<h2>Klicka på knappen för att komma till spelet.</h2>
+			</div>
+			<div class="main">				
+		        <br><button type="button" class="button" id="answerButton"><a href="hangman.html">SPELA</a></button>
+			</div>
+			<!-- Display feedback -->
+			<br><br><div id="main"></div>
+		</div>
+
+	</div>
+
+
+<footer class="footer">
+	<div id="boarder"></div>
+</footer>
+
+<!-- Add scripts -->
+<script src="js/main.js"></script>
+<script src="js/50talet.js"></script>
+<script src="js/60talet.js"></script>
+<script src="js/80talet.js"></script>
+</body>
+
+</html>

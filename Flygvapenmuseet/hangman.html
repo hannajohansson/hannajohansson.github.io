@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Info on tab -->
+	<title>Hangman</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/hangman.css">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+   	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- HEADER -->
+	<div id="header">
+		<img id="logga" src="img/logga.JPG" alt="background">
+		<div class="pull-right"><i class="fa fa-location-arrow fa-3x" id="mapIcon" aria-hidden="true" onclick="showMap()"></i></div>
+	</div>
+
+	<div id="boarder"></div>
+
+	<div id="map" style="display:none;">
+		<img id="karta" src="img/karta.PNG" alt="background">
+	</div>
+
+	<!-- PAGE CONTENT -->
+	<div id="hangman">
+		<div class="wrapper">
+			<!-- Source: https://codepen.io/cathydutton/pen/ldazc -->
+			<br>
+		   	<h1>Hänga Gubbe</h1>
+		    <br>
+		    <p>Klicka på bokstäverna i alfabetet för att gissa om de finns med i ordet.<br>
+		    	Klicka på "ledtråd" om du vill ha en ledtråd.</p>
+		</div>
+		<div class="wrapper">
+		    <div id="buttons">
+		    </div>  
+		    	<br><br><br><p id="catagoryName"></p><br>
+		    
+		    <div id="hold"></div>
+		    
+		    <br><p id="mylives"></p>
+		    <p id="clue">LEDTRÅD: -</p>  
+		    <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+		    
+		    <div class="container">
+		      <button id="hint">Ledtråd</button>
+		      <button id="reset">Börja om</button>
+		    </div>
+		</div>
+		<br><br>
+	</div>
+
+	<div id="continue" style="display:none;">
+		<h1>Du klarade det!</h1>
+		<div>
+			<br><button type="button" class="button" id="clickContinue"><a href="mymemory.html">GÅ VIDARE</a></button>
+		    </div>
+	</div>
+
+<footer class="footer">
+	<div id="boarder"></div>
+</footer>
+
+<!-- Add scripts -->
+<script src="js/main.js"></script>	
+<script src="js/hangman.js"></script>
+<script src="js/60talet.js"></script>
+</body>
+
+</html>

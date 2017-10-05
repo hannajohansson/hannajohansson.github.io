@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title> MEMORY </title>
+<!-- Source: https://stackoverflow.com/questions/29329698/html5-memory-game-javascript-function -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Info on tab -->
+    <title>Hitta försvunna DC3:an</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<script>
+    var clicks = 0; //counts how may picks have been made in each turn
+    var firstchoice; //stores index of first card selected
+    var secondchoice; //stores index of second card selected
+
+    var match = 0; //counts matches made
+    var backcard = "img/memory/guess.jpg"; //shows back of card when turned over
+
+    var faces = []; //array to store card images
+    faces[0] = 'img/memory/1.jpg';
+    faces[1] = 'img/memory/2.jpg';
+    faces[2] = 'img/memory/3.jpg';
+    faces[3] = 'img/memory/4.jpg';
+    faces[4] = 'img/memory/5.jpg';
+    faces[5] = 'img/memory/6.jpg';
+    faces[6] = 'img/memory/7.jpg';
+    faces[7] = 'img/memory/0.jpg';
+    faces[8] = 'img/memory/0.jpg';
+    faces[9] = 'img/memory/3.jpg';
+    faces[10] = 'img/memory/1.jpg';
+    faces[11] = 'img/memory/5.jpg';
+    faces[12] = 'img/memory/7.jpg';
+    faces[13] = 'img/memory/2.jpg';
+    faces[14] = 'img/memory/4.jpg';
+    faces[15] = 'img/memory/6.jpg';
+
+
+    function choose(card) {
+            if (clicks == 2) {
+                return;
+            }
+            if (clicks == 0) {
+                firstchoice = card;
+                document.images[card].src = faces[card];
+                clicks = 1;
+            } else {
+                clicks = 2;
+                secondchoice = card;
+                document.images[card].src = faces[card];
+                timer = setInterval("check()", 1000);
+            }
+        }
+        /* Check to see if a match is made */
+
+      function check() {
+        clearInterval(timer); //stop timer
+        clicks = 0;
+        if (faces[secondchoice] == faces[firstchoice]) {
+            match++;
+            document.getElementById("matches").innerHTML = match;
+        } else {
+            document.images[firstchoice].src = backcard;
+            document.images[secondchoice].src = backcard;
+            return;
+        }
+    }
+</script>
+</head>
+
+<body style="text-align:center;">
+    <!-- HEADER -->
+    <div id="header">
+        <img id="logga" src="img/logga.JPG" alt="background">
+        <div class="pull-right"><i class="fa fa-location-arrow fa-3x" id="mapIcon" aria-hidden="true" onclick="showMap()"></i></div>
+    </div>
+
+    <div id="boarder"></div>
+
+    <div id="map" style="display:none;">
+        <img id="karta" src="img/karta.PNG" alt="background">
+    </div>
+    <br><bR>
+
+    <!-- PAGE CONTENT -->
+     <a href="javascript:choose(0)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+     <a href="javascript:choose(1)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+     <a href="javascript:choose(2)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+     <a href="javascript:choose(3)"><img src="img/memory/guess.jpg" width=150px height=150px/></a>
+
+     <br>
+
+     <a href="javascript:choose(4)"><img src="img/memory/guess.jpg" width=150px height=150px/></a>
+     <a href="javascript:choose(5)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+     <a href="javascript:choose(6)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+     <a href="javascript:choose(7)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+
+    <br>
+
+     <a href="javascript:choose(8)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+     <a href="javascript:choose(9)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+     <a href="javascript:choose(10)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+     <a href="javascript:choose(11)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+
+    <br>
+
+    <a href="javascript:choose(12)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+     <a href="javascript:choose(13)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+     <a href="javascript:choose(14)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+     <a href="javascript:choose(15)"><img src="img/memory/guess.jpg" width=150px height=150px /></a>
+
+    <br>
+    <b style="font-size:40px; font-family: sans-serif;"> Antal hittade par :</b>
+    <b style="font-size:60px; font-family: sans-serif;" id="matches"> 0 </b>
+
+<footer class="footer">
+    <div id="boarder"></div>
+</footer>
+
+<!-- Add scripts -->
+<script src="js/main.js"></script>
+</body>
+
+</html>

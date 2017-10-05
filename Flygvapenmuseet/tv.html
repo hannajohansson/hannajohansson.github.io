@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Info on tab -->
+	<title>Hitta försvunna DC3:an</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+   	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div>
+		<img id="logga" src="img/logga.JPG" alt="background">
+		<br><br><h1>Kan du se något som inte fanns i det tidigare hemmet?</h1>
+	</div>
+
+	<div>
+		<div class="main">
+			<form>
+	            <input id = "inputtext1" type="text" name="SecondInput" placeholder ="Skriv ditt svar här..." required > 
+	        </form>
+				<br><button type="button" class="button" id="answerButton" onclick="getTVAnswer()">Svara</button>
+	    </div>
+	    <!-- Display feedback -->
+	    <br><br><div id="main"></div>
+	</div>
+	
+<script src="js/main.js"></script>
+<script src="js/60talet.js"></script>
+</body>
+
+</html>

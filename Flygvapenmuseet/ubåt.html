@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Info on tab -->
+	<title>Hitta försvunna DC3:an</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+   	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div>
+		<img id="logga" src="img/logga.JPG" alt="background">
+		<br><br><h1>Vad kan du se i rummet som sticker ut?</h1>
+	</div>
+
+	<div>
+		<div class="main">
+			<form>
+	            <input id = "inputtext1" type="text" name="SecondInput" placeholder ="Skriv ditt svar här..." required > 
+	        </form>
+				<br><button type="button" class="button" id="answerButton" onclick="getSecondAnswer()">Svara</button>
+	    </div>
+	    <!-- Display feedback -->
+	    <br><br><div id="main"></div>
+	</div>
+	
+<script src="js/main.js"></script>
+</body>
+
+</html>

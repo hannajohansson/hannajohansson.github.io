@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Info on tab -->
+	<title>Hitta försvunna DC3:an</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+   	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div>
+		<img id="logga" src="img/logga.JPG" alt="background">
+		<br><br><h1>Vilken ljudsignal hörde du?</h1>
+	</div>
+
+	<div>
+		<div class="main">
+			<p>Tryck på knappen för att höra signalen igen.</p><br><br>
+			<button type="button" class="button" id="larm1" onclick="wrongAlarm()">Beredskapslarm</button>
+			<button type="button" class="button" id="larm2" onclick="correctAlarm()">Flyglarm</button>
+			<button type="button" class="button" id="larm3" onclick="wrongAlarm()">Faran är över</button>
+	    </div>
+	    <!-- Display feedback -->
+	    <br><br><div id="main"></div>
+	</div>
+	
+<script src="js/main.js"></script>
+</body>
+
+</html>

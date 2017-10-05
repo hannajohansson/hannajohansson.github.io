@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Info on tab -->
+	<title>Hitta försvunna DC3:an</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+   	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<!-- HEADER -->
+	<div id="header">
+		<img id="logga" src="img/logga.JPG" alt="background">
+	</div>
+
+	<div id="welcome">
+		<br><br><h1>VÄLKOMMEN</h1>
+
+		<div class="main">
+			<br><button type="button" class="button" id="startButton" onclick="showDiv()">STARTA</button>
+	    </div>
+	    <!-- Display feedback -->
+	    <br><br><div id="main"></div>
+	</div>
+
+	<!-- QUESTION 1 -->
+	<div id="question1"  style="display:none;">
+		<div>
+			<br><br><h1>Vad var svenskarna rädda för under den här tiden?</h1>
+		</div>
+
+		<div>
+			<div class="main">
+				<form>
+		            <input id = "inputtext1" type="text" name="FirstInput" placeholder ="Skriv ditt svar här..." required > 
+		        </form>
+					<br><button type="button" class="button" id="answerButton" onclick="getFirstAnswer()">Svara</button>
+		    </div>
+		    <!-- Display feedback -->
+		    <br><br><div id="main"></div>
+		</div>
+	</div>
+	
+<script src="js/main.js"></script>
+</body>
+
+</html>

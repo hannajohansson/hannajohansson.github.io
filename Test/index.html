@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--************************************************************
+    Authors:  Fanny Aldén Hanna Johansson
+    Date: 2017-11-01
+****************************************************************-->
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Title on tab -->
+    <title>Päron AB</title>
+
+    <!-- Load D3 from site -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <!-- Load Chart.js from site -->
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js" charset="utf-8"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Font awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<link rel="shortcut icon" type="image/png" href="img\favicon.png">
+
+</head>
+
+<body>
+	<header>
+	<div class="row">
+		<div class="col-sm-3 text-center"> 
+			<img id="logo" src="img\paron.png">	
+		</div>
+		<div class="col-sm-6 text-center">
+			<h1>Lagersaldo</h1><br>
+		</div>
+		<div class="col-sm-3 text-center">
+            <a href="#openModal1" id="infobutton" onclick="calcFunction()">
+            <img src="img\info.png"></a>
+        </div>
+	</div>
+    <br>
+	</header>
+
+    <!--*******************************
+        BAR CHARTS AND CITY BUTTONS
+    ***********************************-->
+
+    <!-- Display grouped bar chart -->
+    <canvas id="bar-chart-grouped" width="800" height="450"></canvas>
+
+
+    <div class="row">
+        <div class="col-sm-4 text-center">
+            <button type="button" class="citybutton" id="CupertinoButton"><a href="cupertino.html">Cupertino</button>
+        </div>
+        <div class="col-sm-4 text-center"> 
+            <button type="button" class="citybutton" id="NorrkopingButton"><a href="norrkoping.html">Norrköping</button>
+        </div>
+        <div class="col-sm-4 text-center">
+            <button type="button" class="citybutton" id="FrankfurtButton"><a href="frankfurt.html">Frankfurt</button> 
+        </div>
+    </div>
+	
+    <!--*******************************
+            UPDATE BUTTON
+    ***********************************-->
+    <div class ="col-sm-12">
+         <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 text-center">
+                <!-- Button -->
+                <button type="button" id="updatebutton"><a href="uppdaterasaldo.html">Uppdatera lagersaldo</button>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>     
+    </div>
+
+    <div id="openModal1" class="modalDialog" style="text-align:center;">
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h3>Prisinformation</h3>
+            <p align="left"> <br> jPlatta: 5700 SEK <br> jTelefon: 8900 SEK <br> Päronklocka: 11000 SEK </p>
+            <p id="confirmation" align="center" style="font-size:16px;"></p><br>
+            <a href="index.html" id="OKbutton">OK</a><br><br><br>
+        </div>
+    </div>
+
+
+<!--*******************************
+    SCRIPTS
+***********************************-->
+<script src="js/main.js"></script>
+<script src="js/barchart.js"></script>
+<script src="js/handleform.js"></script>
+
+</body>
+
+</html>

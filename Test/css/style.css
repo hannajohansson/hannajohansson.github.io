@@ -1,0 +1,345 @@
+
+html, body {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  width: 96%;
+}
+
+h1 {
+  text-align: center;
+}
+
+#date {
+  text-align: right;
+  margin-right: 5%;
+  font-size: 20px;
+  color: #555555;
+}
+
+#clock {
+  text-align: right;
+  margin-right: 5%;
+  font-size: 20px;
+  color: #555555;
+}
+
+img{
+  width:50px;
+  height:auto;
+  border:0
+}
+
+a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+#colorInfo {
+  width:120px;
+  height:auto;
+}
+
+
+/*--------------------------------
+        BAR CHART by Chart.js
+/*--------------------------------*/
+
+#myChart{
+	width: 50%;
+	height: 50%;
+}
+
+#logo {
+	width: 200px;
+	height: auto;
+	border: 0;
+}
+
+
+/*--------------------------------
+        BUTTONS
+/*--------------------------------*/
+
+#infoButton {
+  background-color: #FFFFFF;
+}
+
+#OKbutton {
+  background-color: #555555; /* Black */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#submitbutton {
+  background-color: #555555; /* Black */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 24px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#submitbutton:hover {
+  background-color:  rgba(118, 175, 10, 0.8); /*green*/
+}
+
+#submitbutton:focus {
+  background-color:  rgba(118, 175, 10, 1); /*green*/
+  color: #555555; /* Black */
+}
+
+#updatebutton {
+  background-color: #555555; /* Black */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 24px;
+  margin: 10%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.citybutton {
+  background-color: #555555; /* Black */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 2%;
+  margin-left: 12%;
+}
+
+/*--------------------------------
+      RADIO BUTTONS
+/*--------------------------------*/
+
+#container{
+  display: block;
+  position: relative;
+  height: auto;
+}
+
+#container ul{
+  list-style: none;
+  overflow: auto;
+}
+
+ul li{
+  color: #555555; /* Black */
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  /*height: 80px;*/
+  /*border-bottom: 1px solid #333;*/
+}
+
+ul li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label{
+  display: block;
+  position: relative;
+  /*font-weight: 300;*/ /*bestämmer hur fet texten är*/
+  font-size: 16px;
+  padding: 6px 5px 5px 55px;
+  margin: 2px auto;
+  /*height: 20px;*/
+  z-index: 9;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+ul li:hover label{
+  color: rgba(118, 175, 10, 0.8); /*green*/
+}
+
+ul li .check{
+  display: block;
+  position: absolute;
+  border: 4px solid #555555;
+  border-radius: 100%;
+  height: 18px;
+  width: 18px;
+  top: 10px;
+  left: 20px;
+  z-index: 5;
+  transition: border .25s linear;
+  -webkit-transition: border .25s linear;
+}
+
+ul li:hover .check {
+  border: 5px solid rgba(118, 175, 10, 0.8); /*green*/   
+}
+
+ul li .check::before {
+  display: block;
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+  height: 6px;
+  width: 6px;
+  top: 1px;
+  left: 1px;
+  margin: auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+}
+
+input[type=radio]:checked ~ .check {
+  border: 5px solid rgba(118, 175, 10, 1); /*green*/
+}
+
+input[type=radio]:checked ~ .check::before{
+  background: rgba(118, 175, 10, 1); /*green*/
+}
+
+input[type=radio]:checked ~ label{
+  color: rgba(118, 175, 10, 1); /*green*/
+}
+
+
+/*--------------------------------
+      TEXT INPUT FIELD
+/*--------------------------------*/
+input[type=text] {
+    width: 40%;
+    padding: 6px 12px;
+    margin: 8px 60px;
+    box-sizing: border-box;
+    border: 3px solid #555; /*#ccc; light grey*/
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+/*
+input[type=text],select{
+    border: 3px solid #0DFF92;
+}
+*/
+
+input[type=text]:focus {
+    border: 3px solid rgba(118, 175, 10, 1); /*green*/
+}
+
+/*--------------------------------
+      FOOTERS
+/*--------------------------------*/
+#infoFooter_C {
+  background-color: #555555;
+  color: white;
+  margin-top: 20px;
+}
+
+#infoFooter_N {
+  background-color: #555555;
+  color: white;
+  margin-top: 20px;
+}
+
+#infoFooter_F {
+  background-color: #555555;
+  color: white;
+  margin-top: 20px;
+}
+
+/*--------------------------------
+        MODAL POPUP
+/*--------------------------------*/
+/*
+#modal{
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+
+#modal:hover{
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+*/
+
+.modalDialog {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modalDialog:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+.modalDialog > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.close {
+  background: rgba(118, 175, 10, 1); /*green*/
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { 
+  background: rgba(118, 175, 10, 1); /*green*/
+}

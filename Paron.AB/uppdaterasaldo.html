@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--************************************************************
+    Authors:  Fanny Aldén Hanna Johansson
+    Date: 2017-11-02
+****************************************************************-->
+
+<html lang="en">
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Title on tab -->
+    <title>Päron AB</title>
+
+    <!-- Load D3 from site -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <!-- Load Chart.js from site -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Font awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<body id="load">
+	<header>
+      <div class ="col-sm-12">
+        <div class="row"> 
+			<div class="col-sm-3 text left"><a href="index.html"><img src="img\arrows.png"></a></div>
+			<div class="col-sm-6 text-center"><h1> Uppdatera saldo </h1></div>
+			<div class="col-sm-3 text-right">
+                <p id="date"><script> document.write(new Date().toLocaleDateString()); </script></p>
+                <p id="clock"></p>
+            </div>
+		</div>
+	</div>
+	</header>
+
+    <!-- FORM -->
+    <div class ="col-sm-12" id="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h3>För vilket lager gäller leveransen?</h3>
+                    <form action="">
+                        <ul>
+                            <li>
+                                <input type="radio" name="warehouse" value="Cupertino" id="check_C" onclick="checkCity();">
+                                <label for="check_C">Cupertino</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" name="warehouse" value="Norrköping" id="check_N" onclick="checkCity();">
+                                <label for="check_N">Norrköping</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>                        
+                            </li>
+                            <li>
+                                <input type="radio" name="warehouse" value="Frankfurt" id="check_F" onclick="checkCity();">
+                                <label for="check_F">Frankfurt</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>                        
+                            </li>
+                        </ul>
+                    </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h3>Välj önskad produkt:</h3>
+                    <form action="">
+                        <ul>
+                            <li>
+                                <input type="radio" name="product" value="jTelefon" id="check_jTel" onclick="checkProduct();">
+                                <label for="check_jTel">jTelefon</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" name="product" value="jPlatta" id="check_jPlatta" onclick="checkProduct();">
+                                <label for="check_jPlatta">jPlatta</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>                        
+                            </li>
+                            <li>
+                                <input type="radio" name="product" value="Päronklocka" id="check_Paron" onclick="checkProduct();">
+                                <label for="check_Paron">Päronklocka</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>                        
+                            </li>
+                        </ul>
+                    </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h3>In- eller utleverans?</h3>
+                    <form action="">
+                        <ul>
+                            <li>
+                                <input type="radio" name="delivery" value="inleverans" id="check_in" onclick="checkDelivery();">
+                                <label for="check_in">Inleverans</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" name="delivery" value="utleverans" id="check_ut" onclick="checkDelivery();">
+                                <label for="check_ut">Utleverans</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>                        
+                            </li>
+                        </ul>
+                    </form>
+                    <p id="feedback" align="center"> </p>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h2>Fyll i antal produkter för leverans:</h2>
+                    <form action="">
+                        <input type="text" name="transaction" id="numberinput" placeholder="t.ex 50000.." value="0" required>
+                    </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <br><br><br>
+
+        <div class ="col-sm-12">
+             <div class="row" style="margin-bottom:40px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 text-center">
+                    <!-- Submit button -->
+                    <!-- <button type="button" id="submitbutton" onclick="calcFunction()">Bekräfta</button><br><br><br> -->
+                    <a href="#openModal" id="submitbutton" onclick="calcFunction()">Bekräfta</a><br><br><br><br>
+                </div>
+                <div class="col-sm-4"></div>
+            </div> 
+        </div> 
+
+        <!--*******************************
+                  MODAL CONTENT
+        ***********************************-->
+        <div id="openModal" class="modalDialog" style="text-align:center;">
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <h3>Leveransen är registrerad!</h3>
+                <p id="confirmation" align="center" style="font-size:16px;"></p><br>
+                <a href="index.html" id="OKbutton">OK</a><br><br><br>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+<!--*******************************
+    SCRIPTS
+***********************************-->
+<script src="js/main.js"></script>
+<script src="js/barchart.js"></script>
+<script src="js/handleform.js"></script>
+<script src="js/clock.js"></script>
+
+</body>
+
+</html>

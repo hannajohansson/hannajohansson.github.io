@@ -126,3 +126,62 @@ nav {
 	border-radius: 40px;
 	width: 10%;
 }
+
+#map {
+	padding: 5%;
+    display: block;
+    margin: 0 auto;
+    max-height: 80%;
+    max-width: 100%;
+}
+
+
+/* ----------------------------------------- */
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    position: relative;
+}
+
+ul li{
+    overflow: hidden; 
+    /*position: relative;*/
+}
+
+/* the blocks/circles */
+.block{
+    width: 22px;
+    height: 22px;
+    margin-right: 20px;
+    background: #262626;
+    border-radius: 50%;
+    float: left;
+}
+
+/* the line */
+.block:after {
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  border: 1.5px solid #262626; /*#b3c6ff;  /*#F6F6F6*/
+  top: 0;
+  left: 10px;
+}
+
+li:last-child .block{
+	position: relative;
+	overflow: hidden;
+}
+
+#city {
+	font-size: 18px;
+}
+
+#text {
+	padding-left: 50px;
+	padding-bottom: 20px;
+}
